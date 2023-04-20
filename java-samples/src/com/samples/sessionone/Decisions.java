@@ -1,5 +1,7 @@
 package com.samples.sessionone;
 
+import java.util.ArrayList;
+
 /**
  * @author Jessica
  *
@@ -27,6 +29,7 @@ public class Decisions {
 		// Single statement
 		if (ticketsTaken > 1)
 			patrons++;
+			System.out.println("algo");
 		// Statement inside a block
 		if (ticketsTaken > 1) {
 			patrons++;
@@ -46,6 +49,14 @@ public class Decisions {
 		case 6:
 			System.out.println("Saturday");
 			break;
+		}
+		
+		if (dayOfWeek == 0) {
+			
+		} else if (dayOfWeek == 6) {
+			
+		} else {
+			
 		}
 	}
 
@@ -69,6 +80,12 @@ public class Decisions {
 	private void getFor() {
 		for (int i = 0; i < 5; i++) {
 			System.out.print(i + " ");
+		}
+		
+		ArrayList<String> arrays = new ArrayList<String>();
+		
+		for(String tmp : arrays) {
+			System.out.println(tmp);
 		}
 	}
 

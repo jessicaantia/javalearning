@@ -1,9 +1,7 @@
 package com.samples.sessionone;
 
-import java.util.*;
-import java.sql.*;
 
-public class ComunErrors {
+class ComunErrors {
 
     short reptile = 65535; // DOES NOT COMPILE 
     char fish = (short)-1; // DOES NOT COMPILE
@@ -20,23 +18,33 @@ public class ComunErrors {
         System.out.println(r.nextInt(10));
 
         // Conflicts
-        Date date;
+        java.util.Date date;
+        java.sql.Date dateTwo;
         
-        int hourOfDay = 1;
+        boolean hourOfDay = false;
         if(hourOfDay) { // DOES NOT COMPILE
         	//
+        } else if(true) {
+        	
         }
         
         int month = 5;
-        switch month { // DOES NOT COMPILE case 1: System.out.print("January");
+        switch month { // DOES NOT COMPILE 
+        case 1: 
+    		System.out.print("January");
         }
         
-        switch (month) // DOES NOT COMPILE case 1: System.out.print("January");
+        switch (month) // DOES NOT COMPILE 
+        case 1: 
+        	System.out.print("January");
+        
         switch (month) {
-        case 1: 2: System.out.print("January"); // DOES NOT COMPILE
+        case 1: 2: 
+        	System.out.print("January"); // DOES NOT COMPILE
         }
         switch (month) {
-        case 1 || 2: System.out.print("January"); // DOES NOT COMPILE
+        case 1 || 2:
+        	System.out.print("January"); // DOES NOT COMPILE
         }
     }
 
@@ -49,7 +57,7 @@ public class ComunErrors {
 
 }
 
-public class SecondClass {
+class SecondClass {
 	
 	public SecondClass() {
 		// Default constructor
