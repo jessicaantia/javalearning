@@ -4,8 +4,8 @@ import java.util.*;
 
 public class TraditionalSearch {
 	public static void main(String[] args) {
-// list of animals
-		List<Animal> animals = new ArrayList<Animal>();
+		// list of animals
+		List<Animal> animals = new ArrayList<Animal>();		
 		animals.add(new Animal("fish", false, true));
 		animals.add(new Animal("kangaroo", true, false));
 		animals.add(new Animal("rabbit", true, false));
@@ -16,6 +16,11 @@ public class TraditionalSearch {
 		print(animals, a -> a.canHop());
 		print(animals, Animal::canHop);
 		print(animals, a -> ! a.canSwim());
+		
+		//boolean one = false;
+		//boolean two = true;
+		//boolean result = one && two ?true:false;
+		//print(animals, a -> ! a.getSpecies().equals("fish") ? "Pez":"");
 	}
 
 	private static void print(List<Animal> animals, CheckTrait checker) {

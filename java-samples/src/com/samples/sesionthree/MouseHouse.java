@@ -8,6 +8,7 @@ public class MouseHouse {
 	public MouseHouse() {
 		volume = 10;
 		// TODO
-		volume = 11;
+		// ERROR
+		// volume = 11;
 	}
 }

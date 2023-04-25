@@ -1,8 +1,15 @@
 package com.samples.sesionthree;
 
 public class Lion extends Animal {
+	
+	public Lion(int age) {
+		super(age);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void setProperties(int age, String n) {
-		setAge(age);
+		// ERROR
+		// setAge(age);
 		name = n;
 	}
 
@@ -11,7 +18,7 @@ public class Lion extends Animal {
 	}
 
 	public static void main(String[] args) {
-		var lion = new Lion();
+		var lion = new Lion(12);
 		lion.setProperties(3, "kion");
 		lion.roar();
 	}
