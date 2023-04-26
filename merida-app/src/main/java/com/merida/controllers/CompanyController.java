@@ -33,6 +33,21 @@ public class CompanyController {
 
 			companyRepository.findAll().forEach(companies::add);
 			
+			/*int i = 0;
+			companies = companyRepository.findAll();
+			System.out.println();
+			companies.addAll(companyRepository.findAll());
+			System.out.println();
+			
+			// For each
+			companyRepository.findAll().forEach(companies::add);
+			
+			// Segunda manera for each
+			for (Company company: companyRepository.findAll()) {
+				company.setActive(false);
+				companies.add(company);
+			}*/
+			
 			System.out.println("Active companies: "+companyRepository.countCompanies());
 
 			if (companies.isEmpty()) {
