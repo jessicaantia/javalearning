@@ -1,4 +1,4 @@
-package com.merida;
+package com.merida.jpa.repositories;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,7 +16,7 @@ import com.merida.jpa.repositories.CompanyRepository;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class CustomerRepositoryTests {
+public class CompanyRepositoryTests {
 	@Autowired
 	private TestEntityManager entityManager;
 

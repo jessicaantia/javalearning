@@ -32,23 +32,18 @@ public class CompanyController {
 			List<Company> companies = new ArrayList<>();
 
 			companyRepository.findAll().forEach(companies::add);
-			
-			/*int i = 0;
-			companies = companyRepository.findAll();
-			System.out.println();
-			companies.addAll(companyRepository.findAll());
-			System.out.println();
-			
-			// For each
-			companyRepository.findAll().forEach(companies::add);
-			
-			// Segunda manera for each
-			for (Company company: companyRepository.findAll()) {
-				company.setActive(false);
-				companies.add(company);
-			}*/
-			
-			System.out.println("Active companies: "+companyRepository.countCompanies());
+
+			/*
+			 * int i = 0; companies = companyRepository.findAll(); System.out.println();
+			 * companies.addAll(companyRepository.findAll()); System.out.println();
+			 * 
+			 * // For each companyRepository.findAll().forEach(companies::add);
+			 * 
+			 * // Segunda manera for each for (Company company: companyRepository.findAll())
+			 * { company.setActive(false); companies.add(company); }
+			 */
+
+			System.out.println("Active companies: " + companyRepository.countCompanies());
 
 			if (companies.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -74,8 +69,7 @@ public class CompanyController {
 	@PostMapping("/company")
 	public ResponseEntity<Company> createCompany(@RequestBody Company company) {
 		try {
-			Company companyInsert = companyRepository
-					.save(new Company(company.getName(), new Date()));
+			Company companyInsert = companyRepository.save(new Company(company.getName(), new Date()));
 			return new ResponseEntity<>(companyInsert, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
