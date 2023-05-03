@@ -8,6 +8,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -23,11 +25,13 @@ public class SpringConfig {
 
 	@Autowired
 	CompanyRepository companyRepository;
+	
+	
+	Logger log = LoggerFactory.getLogger(getClass());
 
 	@Scheduled(cron = "0 0/2 * * * ?")
 	public void scheduleFixedDelayTask() {
 		try {
-			String result = new Util().getData();
 			
 			List<Company> companies = new ArrayList<>();
 
@@ -36,6 +40,7 @@ public class SpringConfig {
 			writeFile(companies);
 		} catch (IOException e) {
 			e.printStackTrace();
+			log.info("");
 		}
 
 		System.out.println("Fixed delay task - " + System.currentTimeMillis() / 1000);
