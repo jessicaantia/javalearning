@@ -1,8 +1,4 @@
-package com.samples.sessionten;
-
-import refactoring_guru.abstract_factory.example.buttons.Button;
-import refactoring_guru.abstract_factory.example.checkboxes.Checkbox;
-import refactoring_guru.abstract_factory.example.factories.GUIFactory;
+package com.samples.sessionten.abstractfactory;
 
 /**
  * Factory users don't care which concrete factory they use since they work with

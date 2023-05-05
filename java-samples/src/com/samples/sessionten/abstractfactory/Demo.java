@@ -1,9 +1,4 @@
-package com.samples.sessionten;
-
-import refactoring_guru.abstract_factory.example.app.Application;
-import refactoring_guru.abstract_factory.example.factories.GUIFactory;
-import refactoring_guru.abstract_factory.example.factories.MacOSFactory;
-import refactoring_guru.abstract_factory.example.factories.WindowsFactory;
+package com.samples.sessionten.abstractfactory;
 
 /**
  * Demo class. Everything comes together here.
@@ -16,6 +11,7 @@ public class Demo {
      * variables.
      */
     private static Application configureApplication() {
+        
         Application app;
         GUIFactory factory;
         String osName = System.getProperty("os.name").toLowerCase();

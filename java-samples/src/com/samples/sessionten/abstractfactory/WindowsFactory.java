@@ -1,13 +1,7 @@
-package com.samples.sessionten;
-
-import refactoring_guru.abstract_factory.example.buttons.Button;
-import refactoring_guru.abstract_factory.example.buttons.WindowsButton;
-import refactoring_guru.abstract_factory.example.checkboxes.Checkbox;
-import refactoring_guru.abstract_factory.example.checkboxes.WindowsCheckbox;
+package com.samples.sessionten.abstractfactory;
 
 /**
- * Each concrete factory extends basic factory and responsible for creating
- * products of a single variety.
+ * Each concrete factory extends basic factory and responsible for creating products of a single variety.
  */
 public class WindowsFactory implements GUIFactory {
 

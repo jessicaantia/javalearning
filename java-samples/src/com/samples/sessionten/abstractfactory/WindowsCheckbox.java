@@ -1,4 +1,4 @@
-package com.samples.sessionten;
+package com.samples.sessionten.abstractfactory;
 
 /**
  * All products families have the same varieties (MacOS/Windows).

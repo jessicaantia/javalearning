@@ -1,7 +1,5 @@
 package com.samples.sessionten.facade;
 
-import refactoring_guru.facade.example.some_complex_media_library.*;
-
 import java.io.File;
 
 public class VideoConversionFacade {

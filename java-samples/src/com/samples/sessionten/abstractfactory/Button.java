@@ -1,4 +1,4 @@
-package com.samples.sessionten;
+package com.samples.sessionten.abstractfactory;
 
 /**
  * Abstract Factory assumes that you have several families of products,
